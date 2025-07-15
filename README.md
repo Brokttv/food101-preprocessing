@@ -53,6 +53,15 @@ from PIL import Image
 from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms
 
+##Requirements
+```python
+python >=3.7
+pandas
+numpy
+pillow
+torch
+torchvision
+
 
 
 
