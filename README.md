@@ -10,7 +10,7 @@ This project preprocesses the Food101 dataset for image classification. It inclu
 
 ## Contents
 
-- `resize_and_filter.py`: Resize images, filter selected classes, and sample 300 images per class  
+- `resize_and_filter.py`: Resize raw Food101 images to 512×512 RGB, filter selected classes with uniform sampling, create train/val/test CSV annotations, optionally zip CSVs, and provide a PyTorch Dataset class for CSV-based loading with transforms and DataLoaders.
 - `create_csv_splits.py`: Generate CSV annotation files (`train.csv`, `val.csv`, `test.csv`) and zip them  
 - `custom_dataset.py`: Define PyTorch Dataset class and DataLoader utilities for CSV-based loading  
 - `filtered_food_dataset/`: Directory containing resized and filtered images organized by class  
