@@ -14,8 +14,9 @@ This project preprocesses the Food101 dataset for image classification. It inclu
   
 - `ImageFolder_Loader.py`: Split a folder of class-labeled images into train/val/test folders with an 80/10/10 ratio, apply image transforms, create PyTorch ImageFolder datasets and DataLoaders, and print dataset statistics.
 
--`project_structures.dm`: A visualization of each project directory structure.
-  
+- `projects_structure.dm`: A visualization of each project directory structure.
+
+
 
 
 
