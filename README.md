@@ -15,6 +15,39 @@ This project preprocesses the Food101 dataset for image classification. It inclu
 - `ImageFolder_Loader.py`: Split a folder of class-labeled images into train/val/test folders with an 80/10/10 ratio, apply image transforms, create PyTorch ImageFolder datasets and DataLoaders, and print dataset statistics.
 
 
+## Directory Structure
+
+project_root/
+├── raw_food_dataset/
+│   └── images/
+│       ├── pizza/
+│       ├── sushi/
+│       ├── burger/
+│       ├── ramen/
+│       └── hot_dog/
+├── cleaned_food_dataset/               # resized 512x512 RGB images for all classes
+│   ├── pizza/
+│   ├── sushi/
+│   ├── burger/
+│   ├── ramen/
+│   └── hot_dog/
+├── filtered_food_dataset/              # sampled 300 images per selected class
+│   ├── pizza/
+│   ├── sushi/
+│   ├── burger/
+│   ├── ramen/
+│   └── hot_dog/
+├── train.csv                          # CSV annotations for training set
+├── val.csv                            # CSV annotations for validation set
+├── test.csv                           # CSV annotations for test set
+├── train_val_test_csv_files/          # copied CSV files for zipping
+│   ├── train.csv
+│   ├── val.csv
+│   └── test.csv
+└── zipped_csv_files.zip                # zipped CSV folder archive
+
+
+
 ## Important Note
 
 This repository **does not include code to download the Food101 dataset**. The preprocessing workflow is a virtual exercise designed for practice.
@@ -43,3 +76,7 @@ Install required dependencies:
 
 ```bash
 pip install pandas numpy pillow torch torchvision
+
+
+
+
