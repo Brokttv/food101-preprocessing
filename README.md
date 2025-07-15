@@ -20,6 +20,7 @@ This project preprocesses the Food101 dataset for image classification. It inclu
 
 
 
+
 ## Important Note
 
 This repository **does not include code to download the Food101 dataset**. The preprocessing workflow is a virtual exercise designed for practice.
