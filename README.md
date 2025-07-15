@@ -53,14 +53,25 @@ from PIL import Image
 from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms
 
-##Requirements
-```python
-python >=3.7
-pandas
-numpy
-pillow
-torch
-torchvision
+---
+
+## Requirements
+
+The following Python packages are required to run the preprocessing code:
+
+- `pathlib`
+- `shutil`
+- `random`
+- `pandas`
+- `numpy`
+- `Pillow`
+- `torch`
+- `torchvision`
+
+You can install the required packages (except standard libraries like `pathlib`, `shutil`, and `random`) using:
+
+```bash
+pip install pandas numpy pillow torch torchvision
 
 
 
