@@ -30,12 +30,11 @@ After downloading and extracting the dataset, place the images directory in the 
 
 # requirements.txt
 
-```txt
-pandas
-numpy
-pillow
-torch
-torchvision
+- pandas
+- numpy
+- pillow
+- torch
+- torchvision
 
 ## Setup
 
