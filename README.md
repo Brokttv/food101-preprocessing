@@ -28,6 +28,13 @@ After downloading and extracting the dataset, place the images directory in the 
 
 ---
 
+# requirements.txt
+
+pandas
+numpy
+pillow
+torch
+torchvision
 
 ## Setup
 
@@ -36,4 +43,7 @@ Install required dependencies:
 ```bash
 pip install pandas numpy pillow torch torchvision
 ---
+
+
+
 
