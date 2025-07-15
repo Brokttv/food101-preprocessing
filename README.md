@@ -1,40 +1,55 @@
-# 🍽️ Food101 Data Preprocessing
+# Food101 Dataset Preprocessing
 
-This repository contains a full image preprocessing pipeline for a subset of the [Food-101 dataset](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/). It includes image resizing, filtering specific classes, random sampling, train/val/test splitting, and support for both `ImageFolder` and custom CSV-based PyTorch datasets.
+This repository contains code to preprocess the Food101 dataset for image classification tasks. The preprocessing pipeline includes resizing images, filtering selected classes, uniform sampling, and generating CSV annotation files for easy dataset loading.
 
-## 📂 Project Structure
+---
 
-raw_food_dataset/
-└── class_name/
-└── image_1.jpg
-└── image_2.jpg
-...
+## What Was Done
 
-cleaned_food_dataset/ ← All images resized to 512x512 JPG
-filtered_food_dataset/ ← 5 filtered classes, 300 samples each
-train.csv, val.csv, test.csv ← CSV files for custom Dataset
+- **Resize and Convert Images:**  
+  All images were resized to 512×512 pixels and converted to RGB `.jpg` format for uniformity.
 
+- **Class Filtering:**  
+  Only a subset of selected classes (e.g., pizza, sushi, burger, etc.) were retained.
 
+- **Uniform Random Sampling:**  
+  For each selected class, 300 samples were randomly sampled to ensure balanced class representation.
 
-## ✅ Features
+- **CSV Annotation Files:**  
+  Dataset splits were created as `train.csv`, `val.csv`, and `test.csv`, containing image paths and corresponding labels.
 
-- Resize and convert all images to `.jpg` (512×512, RGB)
-- Filter only selected classes (e.g., pizza, sushi, burger, etc.)
-- Uniform random sampling (300 samples per class)
-- Generate `train.csv`, `val.csv`, and `test.csv` with labels
-- Supports:
-  - `torchvision.datasets.ImageFolder`
-  - Custom `torch.utils.data.Dataset` using CSV annotations
+- **Dataset Compatibility:**  
+  The processed dataset supports loading via:
+  - `torchvision.datasets.ImageFolder`  
+  - Custom PyTorch `Dataset` classes using CSV annotations.
 
-## 📦 Requirements
+---
 
-```bash
-pip install -r requirements.txt
+## Important Note
 
-requirements.txt:
+This repository **does not include code to download the Food101 dataset**. The preprocessing workflow is a virtual exercise designed for practice.
 
-torch
-torchvision
-pillow
-numpy
-pandas
+### How to Download the Food101 Dataset
+
+Download the official Food101 dataset here:
+
+- [Food101 dataset (official)](https://data.vision.ee.ethz.ch/cvl/food-101.tar.gz)
+
+After downloading and extracting the dataset, place the images directory in the expected folder structure before running preprocessing.
+
+---
+
+## Used Libraries
+
+The preprocessing code uses the following Python libraries:
+
+```python
+import pathlib
+import shutil
+import random
+import pandas as pd
+import numpy as np
+from PIL import Image
+from torch.utils.data import DataLoader, Dataset
+from torchvision import transforms
+
