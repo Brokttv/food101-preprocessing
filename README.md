@@ -12,15 +12,7 @@ This project preprocesses the Food101 dataset for image classification. It inclu
 
 - Preprocessing scripts and notebooks  
 - Generated CSV annotation files (`train.csv`, `val.csv`, `test.csv`)  
-- Resized images directory  
-
-## Setup
-
-Install required dependencies:
-
-```bash
-pip install pandas numpy pillow torch torchvision
----
+- Resized images directory
 
 ## Important Note
 
@@ -35,3 +27,13 @@ Download the official Food101 dataset here:
 After downloading and extracting the dataset, place the images directory in the expected folder structure before running preprocessing.
 
 ---
+
+
+## Setup
+
+Install required dependencies:
+
+```bash
+pip install pandas numpy pillow torch torchvision
+---
+
