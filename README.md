@@ -49,7 +49,3 @@ Install required dependencies:
 
 ```bash
 pip install pandas numpy pillow torch torchvision
-
-
-
-
