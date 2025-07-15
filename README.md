@@ -30,6 +30,7 @@ After downloading and extracting the dataset, place the images directory in the 
 
 # requirements.txt
 
+```bash
 pandas
 numpy
 pillow
